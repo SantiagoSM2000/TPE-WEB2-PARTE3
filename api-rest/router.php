@@ -9,5 +9,6 @@
     //               endpoint           verbo       controller              metodo
     $router->addRoute('reservations'      ,   'GET',    'reservationsApiController',    'getAll');
     $router->addRoute('reservations/:id'  ,   'GET',    'reservationsApiController',    'get');
+    $router->addRoute('reservations'  ,      'POST',    'reservationsApiController',   'create');
 
     $router->route($_GET['resource'], $_SERVER['REQUEST_METHOD']);
