@@ -13,6 +13,13 @@ class ReservationsApiController {
 
     // /api/tareas
     public function getAll($req, $res) {
+        var_dump($res);
+        /*
+
+        if(!$res->user) {
+            return $this->view->response("No autorizado", 401);
+        }*/
+        
         // obtengo las tareas de la DB
         $filterPayed = false;
 
@@ -23,7 +30,11 @@ class ReservationsApiController {
         if(isset($req->query->orderBy))
             $orderBy = $req->query->orderBy;
 
-        $reservations = $this->model->getReservations($filterPayed, $orderBy);
+        $orderASC = false;
+        if(isset($req->query->orderASC))
+            $orderASC = $req->query->orderASC;
+
+        $reservations = $this->model->getReservations($filterPayed, $orderBy, $orderASC);
         
         // mando las tareas a la vista
         return $this->view->response($reservations);
@@ -38,7 +49,7 @@ class ReservationsApiController {
         $task = $this->model->getReservationById($id);
 
         if(!$task) {
-            return $this->view->response("La tarea con el id=$id no existe", 404);
+            return $this->view->response("La reserva con el id=$id no existe", 404);
         }
 
         // mando la tarea a la vista
@@ -49,8 +60,8 @@ class ReservationsApiController {
 
         //var_dump($req->body);
         // valido los datos
-        //REVISAR CON LAS CLASES DE NICO O HACERLO ARREGLO
-        if (empty($req->body["Date"]) || empty($req->body["Room"]) || empty($req->body->ID_Client) || empty($req->body->Payed)) {
+        
+        if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || empty($req->body->Payed)) {
             return $this->view->response('Faltan completar datos', 400);
         }
 
@@ -61,16 +72,47 @@ class ReservationsApiController {
         $Payed = $req->body->Payed;     
 
         // inserto los datos
-        $id = $this->model->insertarReservation($Date, $Room_number, $ID_Client, $Payed);
+        $id = $this->model->insertReservation($Date, $Room_number, $ID_Client, $Payed);
 
         if (!$id) {
-            return $this->view->response("Error al insertar tarea", 500);
+            return $this->view->response("Error al insertar reserva", 500);
         }
 
         // buena práctica es devolver el recurso insertado
         $reservation = $this->model->getReservationById($id);
         return $this->view->response($reservation, 201);
     }
+
+    public function update($req, $res) {
+        $id = $req->params->id;
+
+        // verifico que exista
+        $reservation = $this->model->getReservationById($id);
+        if (!$reservation) {
+            return $this->view->response("La reserva con el id=$id no existe", 404);
+        }
+
+         // valido los datos
+         if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || empty($req->body->Payed)) {
+            return $this->view->response('Faltan completar datos', 400);
+        }
+
+        // obtengo los datos
+        $Date = $req->body->Date;       
+        $Room_number = $req->body->Room_number;       
+        $ID_Client = $req->body->ID_Client;   
+        $Payed = $req->body->Payed;
+        $Image = " "; 
+
+        // actualiza la tarea
+        $this->model->updateReservation($id, $Date, $Room_number, $Image, $ID_Client, $Payed);
+
+        // obtengo la tarea modificada y la devuelvo en la respuesta
+        $reservation = $this->model->getReservationById($id);
+        $this->view->response($reservation, 200);
+    }
+
+
 
 
 }

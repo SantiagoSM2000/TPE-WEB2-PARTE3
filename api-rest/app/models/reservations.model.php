@@ -8,7 +8,7 @@ class ReservationsModel extends Model{
         parent::__construct();//Se invoca al constructor de la clase padre (Model)
     }
 
-    public function getReservations($filterPayed = false, $orderBy = false){//Función para conseguir un arreglo con todas las reservas
+    public function getReservations($filterPayed = false, $orderBy = false, $orderASC =  false){//Función para conseguir un arreglo con todas las reservas
         $query = "SELECT * FROM reservations";
 
         //Solicito las reservas de la base de datos
@@ -31,6 +31,18 @@ class ReservationsModel extends Model{
                     break;
             }
         }
+
+        if ($orderASC) {
+            switch($orderASC) {
+                case "Asc":
+                    $query .= ' ASC';
+                    break;
+                case "Desc":
+                    $query .= ' DESC';
+                    break;
+            }
+        }
+
         $query = $this->db->prepare($query);
         $query->execute();
         $reservations = $query->fetchAll(PDO::FETCH_OBJ);
@@ -80,10 +92,10 @@ class ReservationsModel extends Model{
         return false;
     }
 
-    public function updateReservation($id, $date, $room_number, $image, $ID_Client){//Función para actualizar la reserva con los parámetros recibidos
+    public function updateReservation($id, $date, $room_number, $image = NULL, $ID_Client, $Payed){//Función para actualizar la reserva con los parámetros recibidos
 
         //Actualizo la reserva con los datos del usuario 
-        $query = $this->db->prepare("UPDATE reservations SET Date=?, Room_number=?, Image=?, ID_Client=? WHERE ID_Reservation=?");
-        $query->execute([$date, $room_number, $image, $ID_Client, $id]);
+        $query = $this->db->prepare("UPDATE reservations SET Date=?, Room_number=?, Image=?, ID_Client=?, Payed=? WHERE ID_Reservation=?");
+        $query->execute([$date, $room_number, $image, $ID_Client, $Payed, $id]);
     }
 }
