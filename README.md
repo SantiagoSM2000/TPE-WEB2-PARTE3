@@ -81,39 +81,39 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
       - En el caso de haber ingresado mal el query params se devuelven las reservas sin ningún criterio de ordenamiento
 
-- #### Ordenamiento por orden ascendente o descendente:
+  - #### Ordenamiento por orden ascendente o descendente:
+    
+    - ### Descripción:
   
-  - ### Descripción:
-
-    - Se puede usar unicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
-   
-    - ### Valores del query param order:
-
-    - Asc
-    - Desc
+      - Se puede usar unicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
+     
+      - ### Valores del query param order:
   
-  - ### Cómo usar:
-
-    - URL de la petición
+      - Asc
+      - Desc
+    
+    - ### Cómo usar:
+  
+      - URL de la petición
+        ``` http
+        GET REST/api/reservations?orderBy=:Atributo_permitido&order=:orden
+        ```
+        
+    - ### Ejemplo:
+  
       ``` http
-      GET REST/api/reservations?orderBy=:Atributo_permitido&order=:orden
+      GET REST/api/reservations?orderBy=Room_Number&order=Desc
       ```
-      
-  - ### Ejemplo:
-
-    ``` http
-    GET REST/api/reservations?orderBy=Room_Number&order=Desc
-    ```
-  - ### Resultados esperados:
-
-    - #### Resultado positivo:
-
-      - Código de status = 200 y retorna todas las reservas ordenadas por atributo y por el orden indicado
-
-    - #### Resultado negativo:
-
-      - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
-      - En el caso de haber ingresado solo el ordenamiento ascendente o descendente se retorna un error
+    - ### Resultados esperados:
+  
+      - #### Resultado positivo:
+  
+        - Código de status = 200 y retorna todas las reservas ordenadas por atributo y por el orden indicado
+  
+      - #### Resultado negativo:
+  
+        - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
+        - En el caso de haber ingresado solo el ordenamiento ascendente o descendente se retorna un error
 
 - #### Filtrado de reserva pagada:
     
