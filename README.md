@@ -46,6 +46,18 @@ Crea una reserva al enviarse en el body de la peticion 4 parametros en formato j
 ``` http
 POST REST/api/reservations
 ```
+En el body deben ir los atributos de las reservas en formato JSON
+
+``` json
+{
+  "Date": "2024-10-20",
+  "Room_number": 2023,
+  "ID_Client": 1,
+  "Payed": 1
+}
+
+ ```
+
 ---
 
 PUT
