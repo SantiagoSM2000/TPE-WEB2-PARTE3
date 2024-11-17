@@ -150,10 +150,11 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
 - #### Ejemplos de combinaciones de lo anterior:
 
-  - URL de la petición con todos los ordenamientos y filtrados
-        ``` http
-        GET REST/api/reservations?orderBy=Room_Number&order=Desc&Payed=True
-        ```
+  - URL de la petición con todos los ordenamientos y filtrados:
+    
+    ``` http
+    GET REST/api/reservations?orderBy=Room_Number&order=Desc&Payed=True
+    ```
   
 
 ---
