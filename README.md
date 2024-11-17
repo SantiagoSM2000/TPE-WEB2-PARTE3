@@ -19,7 +19,7 @@ Tabla de contenidos
   - [Cómo usar](#Cómo-usar)
   - [Resultados esperados](#Resultados-esperados)
 	- [Variaciones de la petición con query params](#Variaciones_de_la_petición_con_query_params)
-    - [Descripción](#Descripción)
+    - [Descripción](#Descripción-1)
    
       
 	- [Anchor links](#anchor-links)
