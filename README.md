@@ -8,7 +8,7 @@
 
 ## Descripción:
 
-API Rest RESTful desarrollada para la tercer entrega del trabajo práctico especial de la materia de WEB 2, está conectada a una base de datos de reservas de un hotel y permite conseguir todas las reservas, una reserva mediante su id, crear una resvera, modificar una reserva mediante el id, eliminar una reserva por id y las funciones de creacion, edicion y eliminación están resguardadas por autenticación
+API Rest RESTful desarrollada para la tercer entrega del trabajo práctico especial de la materia de WEB 2, está conectada a una base de datos de reservas de un hotel y permite conseguir todas las reservas, una reserva mediante su id, crear una resvera, modificar una reserva mediante el id, eliminar una reserva por id y las funciones de creacion, edicion y eliminación están resguardadas por autenticación.
 
 ---
 
@@ -24,6 +24,8 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 
 
 ## GET
+
+### Descripción:
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
@@ -97,7 +99,7 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
 
 - #### Resultado positivo:
 
-   - Código de status = 201 y retorna la reserva creada
+  - Código de status = 201 y retorna la reserva creada
 
 - #### Resultado negativo:
 
@@ -105,6 +107,8 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
   - En el caso de no estar autenticado el resultado es el código de status = 401 y retorna un string "No autorizado"
 
 ## PUT
+
+### Descripción:
 
 Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
 
@@ -136,15 +140,34 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
 
 - #### Resultado positivo:
 
-   - Código de status = 201 y retorna la reserva creada
+  - Código de status = 200 y retorna la reserva modificada
 
 - #### Resultado negativo:
 
-   - En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
+  - En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
+  - En el caso de no estar autenticado el resultado es el código de status = 401 y retorna un string "No autorizado"
+
 
 ---
 
 ## Autenticación
+
+### Descripción:
+
+Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que sólo puedan ser usadas por usuarios autorizados. Para conseguir la autenticación se deben seguir los siguientes pasos.
+
+### Cómo usar:
+
+1. URL de la petición para conseguir el token de autenticación
+   ``` http
+   GET REST/api/usuarios/token
+   ```
+
+2. En la sección de autenticación Basic usar las siguientes credenciales:
+   ### Credenciales:
+
+   - Usuario: webadmin
+   - Contraseña: admin
 
 Se inicia con un verbo GET la autenticación basic con el nombre de usuario y la contraseña, la api devuelve un token que se tendrá que usar para autenticar en las funcionalidades de creación y editado de reservas
 
