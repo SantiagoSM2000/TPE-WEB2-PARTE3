@@ -4,7 +4,7 @@
 
 - Santiago San Martín
 
-## Tabla de Rutero:
+## Tabla de Ruteo:
 
 |        URL       |Verbo|       Controlador         |Método    |
 |------------------|-----|---------------------------|----------|
