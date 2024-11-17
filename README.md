@@ -94,7 +94,7 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
      "Payed": 1
    }
    ```
-3. En la sección de autenticación Bearer usar el [token](#proceso-autenticación) previamente conseguido
+3. En la sección de autenticación Bearer usar el [token](#Autenticación) previamente conseguido
    
 ### Resultados esperados:
 
