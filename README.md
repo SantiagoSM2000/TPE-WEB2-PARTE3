@@ -94,7 +94,8 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
      "Payed": 1
    }
    ```
-3. En la sección de autenticación Bearer usar el [token]https://github.com/SantiagoSM2000/TPE-WEB2-PARTE3/blob/main/README.md#autenticaci%C3%B3n previamente conseguido 
+3. En la sección de autenticación Bearer usar el [token](#proceso-autenticación) previamente conseguido
+   
 ### Resultados esperados:
 
 - #### Resultado positivo:
@@ -135,7 +136,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
      "Payed": 1
    }
    ```
-3. En la sección de autenticación Bearer usar el [token]https://github.com/SantiagoSM2000/TPE-WEB2-PARTE3/blob/main/README.md#autenticaci%C3%B3n previamente conseguido 
+3. En la sección de autenticación Bearer usar el [token](#proceso-autenticación) previamente conseguido 
    
 ### Resultados esperados:
 
@@ -151,7 +152,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
 
 ---
 
-## Autenticación
+## Autenticación {#proceso-autenticación}
 
 ### Descripción:
 
