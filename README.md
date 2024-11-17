@@ -50,17 +50,6 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 - ID_Client :entero
 - Payed :booleano (1 o 0)
 
-### Resultados esperados:
-
-#### Resultado positivo:
-
-Código de status = 201 y retorna la reserva creada
-
-#### Resultado negativo:
-
-En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
-
-
 ### Cómo usar:
 
 
@@ -78,6 +67,16 @@ En el caso de no completar alguno de los atributos requeridos el resultado es el
      "Payed": 1
    }
    ```
+
+### Resultados esperados:
+
+#### Resultado positivo:
+
+Código de status = 201 y retorna la reserva creada
+
+#### Resultado negativo:
+
+En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
 
 ## PUT
 
