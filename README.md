@@ -42,7 +42,7 @@ Devuelve una reserva de la base de datos según el ID
 
 - URL de la petición
   ``` http
-     POST REST/api/reservations
+  POST REST/api/reservations
   ```
    
 ---
@@ -65,7 +65,7 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 
 1. URL de la petición
    ``` http
-    POST REST/api/reservations
+   POST REST/api/reservations
    ```
 
 2. En el body de la petición deben ir los atributos de las reservas en formato JSON
