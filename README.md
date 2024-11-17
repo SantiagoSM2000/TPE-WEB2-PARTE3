@@ -34,12 +34,22 @@ GET REST/api/reservations
 
 ## GET/ID
 
-``` http
-GET REST/api/reservations
-```
+### Descripción:
+
+Devuelve una reserva de la base de datos según el ID
+
+### Cómo usar:
+
+1. URL de la petición
+   ``` http
+    POST REST/api/reservations
+   ```
+   
 ---
 
 ## POST
+
+### Descripción:
 
 Crea una reserva y la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request. 
 
