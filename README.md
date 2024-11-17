@@ -1,10 +1,10 @@
 # Trabajo Espeical Web-2 Tercera Parte
 
-##Integrante:
+## Integrante:
 
 -Santiago San Martín
 
-##Tabla de Rutero:
+## Tabla de Rutero:
 
 |URL|Verbo|Controlador|Método|
 |---|-----|-----------|------|
