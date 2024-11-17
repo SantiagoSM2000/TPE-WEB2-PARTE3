@@ -221,7 +221,7 @@ Devuelve una reserva de la base de datos según el ID
 
 - #### Resultado negativo:
 
-   - En condiciones normales no se esperan resultados negativos
+   - - En el caso de enviar un ID no válido por query param se devuelve un código de status = 404 y se retorna un string "La reserva con el id=(valor) no existe"
    
 ---
 
@@ -310,6 +310,37 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
   - En el caso de no estar autenticado el resultado es el código de status = 401 y retorna un string "No autorizado"
 
 
+---
+
+## DELETE
+
+### Descripción:
+
+Elimina una reserva de la base de datos
+
+### Cómo usar:
+
+- URL de la petición con el ID de la reserva que se desea eliminar
+  ``` http
+  DELETE REST/api/reservations/:ID
+  ```
+
+### Ejemplo:
+
+  ``` http
+  DELETE REST/api/reservations/:1
+  ```
+  
+### Resultados esperados:
+
+- #### Resultado positivo:
+
+   - Código de status = 200 y retorna la reserva solicitada por el ID
+
+- #### Resultado negativo:
+
+   - En el caso de enviar un ID no válido por query param se devuelve un código de status = 404 y se retorna un string "La reserva con el id=(valor) no existe"
+ 
 ---
 
 ## Autenticación
