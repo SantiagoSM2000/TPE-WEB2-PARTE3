@@ -53,6 +53,12 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   - ### Descripción:
 
     - Ordena las reservas con el critierio solicitado con orderBY
+      
+  - ### Atributos para usar en el ordenamiento:
+
+    - ID_Reservation
+    - ID_Client
+    - Room_Number
 
   - ### Cómo usar:
 
@@ -60,6 +66,11 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
       ``` http
       GET REST/api/reservations?orderBy=:Atributo_permitido
       ```
+  - ### Ejemplo:
+
+    ``` http
+    GET REST/api/reservations/:29
+    ```
 
 - #### Ordenamiento por orden ascendente o descendente:
 
