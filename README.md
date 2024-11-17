@@ -80,16 +80,16 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
 
 ### Cómo usar:
 
-1. URL de la petición
+1. URL de la petición:
    ``` http
    POST REST/api/reservations
    ```
 
-2. En el body de la petición deben ir los atributos de las reservas en formato JSON
+2. En el body de la petición deben ir los atributos de las reservas en formato JSON por ejemplo:
    ``` json
    {
-     "Date": "2024-10-20",
-     "Room_number": 2023,
+     "Date": "2024-11-17",
+     "Room_number": 100,
      "ID_Client": 1,
      "Payed": 1
    }
@@ -127,11 +127,11 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
    PUT REST/api/reservations/:ID
    ```
 
-2. En el body de la petición deben ir los atributos de las reservas en formato JSON
+2. En el body de la petición deben ir los atributos de las reservas en formato JSON por ejemplo:
    ``` json
    {
-     "Date": "2024-10-20",
-     "Room_number": 2023,
+     "Date": "2024-11-17",
+     "Room_number": 100,
      "ID_Client": 1,
      "Payed": 1
    }
