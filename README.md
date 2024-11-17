@@ -23,7 +23,7 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 |usuarios/token    |GET  |userApiController          |getToken  |
 
 
-GET
+##GET
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
@@ -32,7 +32,7 @@ GET REST/api/reservations
 ```
 ---
 
-GET/ID
+## GET/ID
 
 ``` http
 GET REST/api/reservations
@@ -79,7 +79,7 @@ En el caso de no completar alguno de los atributos requeridos el resultado es el
    }
    ```
 
-PUT
+## PUT
 
 Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
 
@@ -88,7 +88,7 @@ PUT REST/api/reservations
 ```
 ---
 
-Autenticación
+## Autenticación
 
 Se inicia con un verbo GET la autenticación basic con el nombre de usuario y la contraseña, la api devuelve un token que se tendrá que usar para autenticar en las funcionalidades de creación y editado de reservas
 
