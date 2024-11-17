@@ -32,7 +32,7 @@ GET REST/api/reservations
 
 GET/ID
 
-```
+``` http
 GET REST/api/reservations
 ```
 ---
@@ -41,7 +41,7 @@ POST
 
 Crea una reserva al enviarse en el body de la peticion 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0) en el caso de faltar alguno de los parametros la api respondera con el codigo de error 400
 
-```
+``` http
 POST REST/api/reservations
 ```
 ---
@@ -50,7 +50,7 @@ PUT
 
 Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
 
-```
+``` http
 PUT REST/api/reservations
 ```
 ---
@@ -63,6 +63,6 @@ para conseguir el token se debe hacer una petición del estilo GET usuarios/toke
 
 las credenciales por defecto son Usuario: webadmin y Contraseña: admin
 
-```
+``` http
 GET REST/api/usuarios/token
 ```
