@@ -13,28 +13,22 @@ class ReservationsApiController {
 
     // /api/tareas
     public function getAll($req, $res) {
-        var_dump($res);
-        /*
-
-        if(!$res->user) {
-            return $this->view->response("No autorizado", 401);
-        }*/
         
         // obtengo las tareas de la DB
         $filterPayed = false;
 
-        if(isset($req->query->Payed) && $req->query->Payed == 'true'){
+        if(isset($req->query->Payed) && $req->query->Payed == 'True'){
             $filterPayed = true;
         }
         $orderBy = false;
         if(isset($req->query->orderBy))
             $orderBy = $req->query->orderBy;
 
-        $orderASC = false;
-        if(isset($req->query->orderASC))
-            $orderASC = $req->query->orderASC;
+        $order = false;
+        if(isset($req->query->order))
+            $order = $req->query->order;
 
-        $reservations = $this->model->getReservations($filterPayed, $orderBy, $orderASC);
+        $reservations = $this->model->getReservations($filterPayed, $orderBy, $order);
         
         // mando las tareas a la vista
         return $this->view->response($reservations);
@@ -60,19 +54,27 @@ class ReservationsApiController {
 
         //var_dump($req->body);
         // valido los datos
+        if(!$res->user) {
+            return $this->view->response("No autorizado", 401);
+        }
         
-        if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || empty($req->body->Payed)) {
+        if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || !isset($req->body->Payed)) {
             return $this->view->response('Faltan completar datos', 400);
         }
 
         // obtengo los datos
         $Date = $req->body->Date;       
-        $Room_number = $req->body->Room_number;       
+        $Room_number = $req->body->Room_number;
+        if (isset($req->body->Image)){
+            $Image = $req->body->Image; 
+        } else {
+            $Image = " ";
+        }
         $ID_Client = $req->body->ID_Client;   
         $Payed = $req->body->Payed;     
 
         // inserto los datos
-        $id = $this->model->insertReservation($Date, $Room_number, $ID_Client, $Payed);
+        $id = $this->model->insertReservation($Date, $Room_number, $ID_Client, $Payed, $Image);
 
         if (!$id) {
             return $this->view->response("Error al insertar reserva", 500);
@@ -84,6 +86,11 @@ class ReservationsApiController {
     }
 
     public function update($req, $res) {
+
+        if(!$res->user) {
+            return $this->view->response("No autorizado", 401);
+        }
+        
         $id = $req->params->id;
 
         // verifico que exista

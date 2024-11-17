@@ -8,7 +8,7 @@ class ReservationsModel extends Model{
         parent::__construct();//Se invoca al constructor de la clase padre (Model)
     }
 
-    public function getReservations($filterPayed = false, $orderBy = false, $orderASC =  false){//Función para conseguir un arreglo con todas las reservas
+    public function getReservations($filterPayed = false, $orderBy = false, $order =  false){//Función para conseguir un arreglo con todas las reservas
         $query = "SELECT * FROM reservations";
 
         //Solicito las reservas de la base de datos
@@ -26,14 +26,14 @@ class ReservationsModel extends Model{
                 case "ID_Client":
                     $query .= ' ORDER BY ID_Client';
                     break;
-                case "Room_number":
-                    $query .= ' ORDER BY Room_number';
+                case "Room_Number":
+                    $query .= ' ORDER BY Room_Number';
                     break;
             }
         }
 
-        if ($orderASC) {
-            switch($orderASC) {
+        if ($order) {
+            switch($order) {
                 case "Asc":
                     $query .= ' ASC';
                     break;
@@ -69,12 +69,12 @@ class ReservationsModel extends Model{
         $query->execute([$id]);
     }
 
-    public function insertReservation($date, $room_number, $ID_Client, $Payed){//Función que inserta una reserva con los parámetros recibidos
+    public function insertReservation($date, $room_number, $ID_Client, $Payed, $Image = null){//Función que inserta una reserva con los parámetros recibidos
         
         //Inserto la reserva con los datos del usuario 
         $id = NULL;
-        $query = $this->db->prepare("INSERT INTO reservations (ID_Reservation, Date, Room_number, Image, ID_Client) VALUES (?, ?, ?, ?, ?)");
-        $query->execute([$id, $date, $room_number, $ID_Client, $Payed]);
+        $query = $this->db->prepare("INSERT INTO reservations (ID_Reservation, Date, Room_number, Image, ID_Client, Payed) VALUES (?, ?, ?, ?, ?, ?)");
+        $query->execute([$id, $date, $room_number, $Image, $ID_Client, $Payed]);
     
         return $this->db->lastinsertId();
     }

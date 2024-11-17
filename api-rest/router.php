@@ -15,6 +15,6 @@
     $router->addRoute('reservations/:id'  ,   'GET',    'reservationsApiController',    'get');
     $router->addRoute('reservations'      ,  'POST',    'reservationsApiController',    'create');
     $router->addRoute('reservations/:id'  ,   'PUT',    'reservationsApiController',    'update');
-    $router->addRoute('usuarios/token'    ,   'GET',    'UserApiController'        ,    'getToken');
+    $router->addRoute('usuarios/token'    ,   'GET',    'userApiController'        ,    'getToken');
 
     $router->route($_GET['resource'], $_SERVER['REQUEST_METHOD']);
