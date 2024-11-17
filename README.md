@@ -59,6 +59,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
     - ID_Reservation
     - ID_Client
     - Room_Number
+    - Date
 
   - ### Cómo usar:
 
@@ -113,7 +114,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
       - #### Resultado negativo:
   
         - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
-        - En el caso de haber ingresado solo el ordenamiento ascendente o descendente se retorna un error
+        - En el caso de haber ingresado solo el ordenamiento ascendente o descendente se devuelve código de status = 400 y retorna un string "Falta ordenar por un atributo"
 
 - #### Filtrado de reserva pagada:
 
