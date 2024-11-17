@@ -148,7 +148,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
         - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
 
-- #### Ejemplos de combinaciones de lo anterior:
+- #### Ejemplo de combinación de las variaciones anteriores:
 
   - URL de la petición con todos los ordenamientos y filtrados:
     
