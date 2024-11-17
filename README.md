@@ -152,7 +152,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
 
 ---
 
-## Autenticación{#proceso-autenticación}
+## Autenticación
 
 ### Descripción:
 
@@ -173,6 +173,4 @@ Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que s
 
 3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiéndolo en la sección de de autenticación Bearer
 
-
-   [Markdown - Link](#[Link](https://github.com/SantiagoSM2000/TPE-WEB2-PARTE3/blob/main/README.md#autenticaci%C3%B3n))
 
