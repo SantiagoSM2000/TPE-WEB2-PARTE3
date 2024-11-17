@@ -53,8 +53,9 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 
 en el caso de faltar alguno de los parametros la api respondera con el codigo de error 400
 
-Cómo usar:
+### Cómo usar:
 
+- 
 ``` http
 POST REST/api/reservations
 ```
