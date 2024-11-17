@@ -152,7 +152,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
 
 ---
 
-## Autenticación {#proceso-autenticación}
+## Autenticación{#proceso-autenticación}
 
 ### Descripción:
 
