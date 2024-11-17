@@ -23,7 +23,7 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 |usuarios/token    |GET  |userApiController          |getToken  |
 
 
-##GET
+## GET
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
@@ -67,7 +67,7 @@ Devuelve una reserva de la base de datos según el ID
 
 ### Descripción:
 
-Crea una reserva y la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request. 
+Crea una reserva, la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request y la devuelve
 
 ### Atributos necesarios:
 
@@ -77,7 +77,6 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 - Payed :booleano (1 o 0)
 
 ### Cómo usar:
-
 
 1. URL de la petición
    ``` http
@@ -102,15 +101,47 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 
 - #### Resultado negativo:
 
-   - En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
+  - En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
+  - En el caso de no estar autenticado el resultado es el código de status = 401 y retorna un string "No autorizado"
 
 ## PUT
 
 Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
 
-``` http
-PUT REST/api/reservations
-```
+### Atributos necesarios:
+
+- Date :fecha ("aaaa-mm-dd")
+- Room_number :entero
+- ID_Client :entero
+- Payed :booleano (1 o 0)
+
+### Cómo usar:
+
+1. URL de la petición con el ID de la reserva que se desea modificar
+   ``` http
+   PUT REST/api/reservations/:ID
+   ```
+
+2. En el body de la petición deben ir los atributos de las reservas en formato JSON
+   ``` json
+   {
+     "Date": "2024-10-20",
+     "Room_number": 2023,
+     "ID_Client": 1,
+     "Payed": 1
+   }
+   ```
+   
+### Resultados esperados:
+
+- #### Resultado positivo:
+
+   - Código de status = 201 y retorna la reserva creada
+
+- #### Resultado negativo:
+
+   - En el caso de no completar alguno de los atributos requeridos el resultado es el código de status = 400 y retorna un string "Faltan completar datos"
+
 ---
 
 ## Autenticación
