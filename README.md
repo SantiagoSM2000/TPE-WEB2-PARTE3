@@ -18,7 +18,7 @@ Tabla de contenidos
   - [Descripción](#Descripción)
   - [Cómo usar](#Cómo-usar)
   - [Resultados esperados](#Resultados-esperados)
-	- [Variaciones de la petición con query params](#Variaciones_de_la_petición_con_query_params)
+	- [Variaciones de la petición con query params](#Variaciones-de-la-petición-con-query-params)
     - [Descripción](#Descripción-1)
    
       
