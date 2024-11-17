@@ -41,12 +41,24 @@ GET REST/api/reservations
 
 POST
 
-Crea una reserva al enviarse en el body de la peticion 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0) en el caso de faltar alguno de los parametros la api respondera con el codigo de error 400
+Crea una reserva y la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request. 
 
-``` http
+### Atributos necesarios:
+
+Date :fecha("aaaa-mm-dd")
+Room_number :entero
+ID_Client :entero
+Payed :booleano (1 o 0)
+
+
+en el caso de faltar alguno de los parametros la api respondera con el codigo de error 400
+
+Cómo usar:
+
+``` - http
 POST REST/api/reservations
 ```
-En el body deben ir los atributos de las reservas en formato JSON
+En el body del request deben ir los atributos de las reservas en formato JSON
 
 ``` json
 {
