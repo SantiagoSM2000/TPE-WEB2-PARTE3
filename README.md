@@ -20,8 +20,10 @@
 GET
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
-> GET REST/api/reservations
 
+``` javascript
+GET REST/api/reservations
+```
 ---
 
 GET/ID
