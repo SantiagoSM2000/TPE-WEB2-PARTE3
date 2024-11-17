@@ -29,9 +29,33 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
-``` http
-GET REST/api/reservations
-```
+### Cómo usar:
+
+- URL de la petición
+  ``` http
+  GET REST/api/reservations/
+  ```
+
+### Resultados esperados:
+
+- #### Resultado positivo:
+
+   - Código de status = 200 y retorna todas las reservas
+
+- #### Resultado negativo:
+
+   - En condiciones normales no se esperan resultados negativos
+ 
+### Variaciones de la petición:
+
+#### Ordenamiento por atributo:
+
+#### Ordenamiento por orden ascendente o descendente:
+
+#### Filtrado de reserva pagada:
+
+#### Ejemplos de combinaciones de lo anterior:
+
 ---
 
 ## GET/ID
@@ -44,13 +68,13 @@ Devuelve una reserva de la base de datos según el ID
 
 - URL de la petición con el ID de la reserva que se desea solicitar
   ``` http
-  POST REST/api/reservations/:ID
+  GET REST/api/reservations/:ID
   ```
 
 ### Ejemplo:
 
   ``` http
-  POST REST/api/reservations/:29
+  GET REST/api/reservations/:29
   ```
   
 ### Resultados esperados:
