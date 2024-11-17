@@ -6,10 +6,10 @@
 
 ## Tabla de Rutero:
 
-|URL|Verbo|Controlador|Método|
-|---|-----|-----------|------|
-|reservations|GET|reservationsApiController|getAll|
-|reservations/:id|GET|reservationsApiController|get|
-|reservations|POST|reservationsApiController|create|
-|reservations/:id|PUT|reservationsApiController|update|
-|usuarios/token|GET|reservationsApiController|getToken|
+|        URL       |Verbo|       Controlador         |Método    |
+|------------------|-----|---------------------------|----------|
+|reservations      |GET  |reservationsApiController  |getAll    |
+|reservations/:id  |GET  |reservationsApiController  |get       |
+|reservations      |POST |reservationsApiController  |create    |
+|reservations/:id  |PUT  |reservationsApiController  |update    |
+|usuarios/token    |GET  |userApiController          |getToken  |
