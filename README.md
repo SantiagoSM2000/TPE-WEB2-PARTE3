@@ -12,17 +12,6 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 
 ---
 
-## Tabla de Ruteo:
-
-|        URL       |Verbo|       Controlador         |Método    |
-|------------------|-----|---------------------------|----------|
-|reservations      |GET  |reservationsApiController  |getAll    |
-|reservations/:id  |GET  |reservationsApiController  |get       |
-|reservations      |POST |reservationsApiController  |create    |
-|reservations/:id  |PUT  |reservationsApiController  |update    |
-|usuarios/token    |GET  |userApiController          |getToken  |
-
-
 ## GET
 
 ### Descripción:
@@ -364,4 +353,15 @@ Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que s
 
 3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiéndolo en la sección de de autenticación Bearer
 
+---
+
+## Tabla de Ruteo:
+
+|        URL       |Verbo|       Controlador         |Método    |
+|------------------|-----|---------------------------|----------|
+|reservations      |GET  |reservationsApiController  |getAll    |
+|reservations/:id  |GET  |reservationsApiController  |get       |
+|reservations      |POST |reservationsApiController  |create    |
+|reservations/:id  |PUT  |reservationsApiController  |update    |
+|usuarios/token    |GET  |userApiController          |getToken  |
 
