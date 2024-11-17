@@ -21,7 +21,7 @@ GET
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
-``` php
+``` postman
 GET REST/api/reservations
 ```
 ---
