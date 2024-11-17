@@ -154,7 +154,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
 
 ### Descripción:
 
-Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que sólo puedan ser usadas por usuarios autorizados. Para conseguir la autenticación se deben seguir los siguientes pasos.
+Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que sólo puedan ser usadas por usuarios autorizados. Para conseguir el token de autenticación se deben seguir los siguientes pasos.
 
 ### Cómo usar:
 
@@ -164,20 +164,10 @@ Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que s
    ```
 
 2. En la sección de autenticación Basic usar las siguientes credenciales:
-   ### Credenciales:
+   #### Credenciales:
 
    - Usuario: webadmin
    - Contraseña: admin
 
-Se inicia con un verbo GET la autenticación basic con el nombre de usuario y la contraseña, la api devuelve un token que se tendrá que usar para autenticar en las funcionalidades de creación y editado de reservas
+3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiendolo en la sección de de autenticación Bearer
 
-para conseguir el token se debe hacer una petición del estilo GET usuarios/token y en la sección de Autenticación se deberá seleccionar el tipo de autenticación llamado Basic y completar con las credenciales correctas, luego la api devuelve un token que se tendrá que usar en las peticiones POST y PUT completando en la sección de autenticación bearer con el token
-
-### Credenciales:
-
-- Usuario: webadmin
-- Contraseña: admin
-
-``` http
-GET REST/api/usuarios/token
-```
