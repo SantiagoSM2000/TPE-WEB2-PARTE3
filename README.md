@@ -21,7 +21,7 @@ GET
 
 Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
 
-``` javascript
+``` php
 GET REST/api/reservations
 ```
 ---
