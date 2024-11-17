@@ -45,17 +45,17 @@ Crea una reserva y la inserta en la base de datos con los atributos requeridos e
 
 ### Atributos necesarios:
 
-Date :fecha("aaaa-mm-dd")
-Room_number :entero
-ID_Client :entero
-Payed :booleano (1 o 0)
+- Date :fecha("aaaa-mm-dd")
+- Room_number :entero
+- ID_Client :entero
+- Payed :booleano (1 o 0)
 
 
 en el caso de faltar alguno de los parametros la api respondera con el codigo de error 400
 
 Cómo usar:
 
-``` - http
+``` http
 POST REST/api/reservations
 ```
 En el body del request deben ir los atributos de las reservas en formato JSON
