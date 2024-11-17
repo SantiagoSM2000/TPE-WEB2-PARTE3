@@ -63,7 +63,10 @@ Se inicia con un verbo GET la autenticación basic con el nombre de usuario y la
 
 para conseguir el token se debe hacer una petición del estilo GET usuarios/token y en la sección de Autenticación se deberá seleccionar el tipo de autenticación llamado Basic y completar con las credenciales correctas, luego la api devuelve un token que se tendrá que usar en las peticiones POST y PUT completando en la sección de autenticación bearer con el token
 
-las credenciales por defecto son Usuario: webadmin y Contraseña: admin
+### Credenciales:
+
+- Usuario: webadmin
+- Contraseña: admin
 
 ``` http
 GET REST/api/usuarios/token
