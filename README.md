@@ -66,11 +66,11 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
       ``` http
       GET REST/api/reservations?orderBy=:Atributo_permitido
       ```
-  - ### Ejemplo:
+    - ### Ejemplo:
 
-    ``` http
-    GET REST/api/reservations?orderBy=Room_Number
-    ```
+      ``` http
+      GET REST/api/reservations?orderBy=Room_Number
+      ```
   - ### Resultados esperados:
 
     - #### Resultado positivo:
@@ -99,11 +99,11 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
         GET REST/api/reservations?orderBy=:Atributo_permitido&order=:orden
         ```
         
-    - ### Ejemplo:
+      - ### Ejemplo:
   
-      ``` http
-      GET REST/api/reservations?orderBy=Room_Number&order=Desc
-      ```
+        ``` http
+        GET REST/api/reservations?orderBy=Room_Number&order=Desc
+        ```
     - ### Resultados esperados:
   
       - #### Resultado positivo:
