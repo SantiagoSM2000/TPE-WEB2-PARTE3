@@ -56,12 +56,12 @@ en el caso de faltar alguno de los parametros la api respondera con el codigo de
 ### Cómo usar:
 
 
-* Petición URL 
+1. Petición URL 
   ``` http
   POST REST/api/reservations
   ```
 
-* En el body de la petición deben ir los atributos de las reservas en formato JSON
+2. En el body de la petición deben ir los atributos de las reservas en formato JSON
   ``` json
   {
     "Date": "2024-10-20",
