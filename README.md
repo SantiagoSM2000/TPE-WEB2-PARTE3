@@ -55,24 +55,13 @@ en el caso de faltar alguno de los parametros la api respondera con el codigo de
 
 ### Cómo usar:
 
-* some text     =>  use 2 spaces indentation e.g.
 
-  ```
-  $ gem install beerdb
-  ```
-
-1. some text    =>  use 3 spaces indentation e.g.
-
-   ```
-   $ gem install beerdb
-   ```
-
-*· Petición URL 
+* Petición URL 
   ``` http
   POST REST/api/reservations
   ```
 
-*· En el body de la petición deben ir los atributos de las reservas en formato JSON
+* En el body de la petición deben ir los atributos de las reservas en formato JSON
   ``` json
   {
     "Date": "2024-10-20",
@@ -80,10 +69,6 @@ en el caso de faltar alguno de los parametros la api respondera con el codigo de
     "ID_Client": 1,
     "Payed": 1
   }
-
- ```
-
----
 
 PUT
 
