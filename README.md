@@ -54,7 +54,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
     - Ordena las reservas según el critierio solicitado con el query param "orderBy"
       
-  - ### Atributos para usar en el ordenamiento:
+  - ### Atributos para usar en el query param "orderBy":
 
     - ID_Reservation
     - ID_Client
@@ -87,7 +87,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
       - Se puede usar unicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
      
-      - ### Valores del query param order:
+      - ### Valores del query param "order":
   
         - Asc
         - Desc
@@ -116,9 +116,45 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
         - En el caso de haber ingresado solo el ordenamiento ascendente o descendente se retorna un error
 
 - #### Filtrado de reserva pagada:
-    
+
+  - ### Descripción:
+  
+    - Filtra las reservas pagadas y solo devuelve esas, se debe utilizar el query param "Payed"
+      
+  - ### Valores del query param "Payed":
+  
+    - True
+    - False
+      
+  - ### Cómo usar:
+  
+    - URL de la petición
+      ``` http
+      GET REST/api/reservations?Payed:=Valor
+        
+    - ### Ejemplo:
+  
+      ``` http
+      GET REST/api/reservations?Payed=True
+      ```
+      
+  - ### Resultados esperados:
+  
+      - #### Resultado positivo:
+  
+        - Código de status = 200 y retorna todas las reservas que cumplan con el valor del query param
+  
+      - #### Resultado negativo:
+  
+        - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
 
 - #### Ejemplos de combinaciones de lo anterior:
+
+  - URL de la petición con todos los ordenamientos y filtrados
+        ``` http
+        GET REST/api/reservations?orderBy=Room_Number&order=Desc&Payed=True
+        ```
+  
 
 ---
 
