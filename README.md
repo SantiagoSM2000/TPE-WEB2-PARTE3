@@ -40,9 +40,9 @@ Devuelve una reserva de la base de datos según el ID
 
 ### Cómo usar:
 
-- URL de la petición
+- URL de la petición con el ID de la reserva que se desea solicitar
   ``` http
-  POST REST/api/reservations
+  POST REST/api/reservations/:ID
   ```
   
 ### Resultados esperados:
