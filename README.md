@@ -48,13 +48,19 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
  
 ### Variaciones de la petición:
 
-#### Ordenamiento por atributo:
+- #### Ordenamiento por atributo:
+  -  ### Cómo usar:
 
-#### Ordenamiento por orden ascendente o descendente:
+     - URL de la petición
+       ``` http
+       GET REST/api/reservations/
+       ```
 
-#### Filtrado de reserva pagada:
+- #### Ordenamiento por orden ascendente o descendente:
 
-#### Ejemplos de combinaciones de lo anterior:
+- #### Filtrado de reserva pagada:
+
+- #### Ejemplos de combinaciones de lo anterior:
 
 ---
 
