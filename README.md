@@ -55,13 +55,13 @@ en el caso de faltar alguno de los parametros la api respondera con el codigo de
 
 ### Cómo usar:
 
-*·some text     =>  use 2 spaces indentation e.g.
+* some text     =>  use 2 spaces indentation e.g.
 
   ```
   $ gem install beerdb
   ```
 
-1.·some text    =>  use 3 spaces indentation e.g.
+1. some text    =>  use 3 spaces indentation e.g.
 
    ```
    $ gem install beerdb
