@@ -12,6 +12,29 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 
 ---
 
+Tabla de contenidos
+
+- [GET](#GET)
+  - [Descripción](#Descripción)
+  - [Cómo usar](#Cómo-usar)
+  - [Resultados esperados](#Resultados-esperados)
+	- [Variaciones de la petición con query params](#Variaciones_de_la_petición_con_query_params)
+    - [Descripción](#Descripción)
+   
+      
+	- [Anchor links](#anchor-links)
+- [Blockquote](#blockquote)
+- [Image | GIF](#image--gif)
+- [Style Text](#style-text)
+	- [Italic](#italic)
+	- [Bold](#bold)
+	- [Strikethrough](#strikethrough)
+- [Code](#code)
+- [Email](#email)
+- [Table](#table)
+
+---
+
 ## GET
 
 ### Descripción:
