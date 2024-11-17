@@ -44,6 +44,16 @@ Devuelve una reserva de la base de datos según el ID
   ``` http
   POST REST/api/reservations
   ```
+  
+### Resultados esperados:
+
+- #### Resultado positivo:
+
+   - Código de status = 200 y retorna la reserva solicitada por el ID
+
+- #### Resultado negativo:
+
+   - En condiciones normales no se esperan resultados negativos
    
 ---
 
