@@ -89,8 +89,8 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
      
       - ### Valores del query param order:
   
-      - Asc
-      - Desc
+        - Asc
+        - Desc
     
     - ### Cómo usar:
   
