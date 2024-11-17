@@ -39,7 +39,7 @@ GET REST/api/reservations
 ```
 ---
 
-POST
+## POST
 
 Crea una reserva y la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request. 
 
