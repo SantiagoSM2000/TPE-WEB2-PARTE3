@@ -2,7 +2,7 @@
 
 ## Integrante:
 
--Santiago San Martín
+- Santiago San Martín
 
 ## Tabla de Rutero:
 
