@@ -136,7 +136,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
      "Payed": 1
    }
    ```
-3. En la sección de autenticación Bearer usar el [token](#proceso-autenticación) previamente conseguido 
+3. En la sección de autenticación Bearer usar el [token](#Autenticación) previamente conseguido 
    
 ### Resultados esperados:
 
