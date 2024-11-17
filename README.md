@@ -44,6 +44,12 @@ Devuelve una reserva de la base de datos según el ID
   ``` http
   POST REST/api/reservations/:ID
   ```
+
+### Ejemplo:
+
+  ``` http
+  POST REST/api/reservations/:29
+  ```
   
 ### Resultados esperados:
 
