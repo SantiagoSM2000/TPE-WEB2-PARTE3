@@ -19,11 +19,20 @@ Tabla de contenidos
   - [Cómo usar](#Cómo-usar)
   - [Resultados esperados](#Resultados-esperados)
 	- [Variaciones de la petición con query params](#Variaciones-de-la-petición-con-query-params)
-    - [Descripción](#Descripción-1)
-   
-      
-	- [Anchor links](#anchor-links)
-- [Blockquote](#blockquote)
+  		- [Ordenamiento por atributo](#Ordenamiento-por-atributo)
+    			- [Descripción](#Descripción-1)
+        		- [Cómo usar](#Cómo-usar-1)
+         		- [Resultados esperados](#Resultados-esperados-1)
+            	- [Ordenamiento por orden ascendente o descendente](#Ordenamiento-por-orden-ascendente-o-descendente)
+      			- [Descripción](#Descripción-2)
+   			- [Cómo usar](#Cómo-usar-2)
+      			- [Resultados esperados](#Resultados-esperados-2)
+           	- [Filtrado de reserva pagada](#Filtrado-de-reserva-pagada)
+           		- [Descripción](#Descripción-3)
+           		- [Cómo usar](#Cómo-usar-3)
+      			- [Resultados esperados](#Resultados-esperados-3)
+	
+- [Filtrado de reserva pagada](#Filtrado-de-reserva-pagada)
 - [Image | GIF](#image--gif)
 - [Style Text](#style-text)
 	- [Italic](#italic)
@@ -161,39 +170,40 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
         - En el caso de haber ingresado mal el query params se devuelven las reservas en orden ascendente por defecto
           
-  - #### Paginado:
+- #### Paginado:
+
+  - ### Descripción:
+
+    - Solo devuelve las reservas que se encuentren comprendidas por la página y cantidad de reservas por página que se usen en los query params
+
+  - ### Query params y sus posibles valores:
+
+    - page = entero positivo
+    - amount = entero positivo
+
+  - ### Cómo usar:
+
+    - URL de la petición
+    ``` http
+    GET REST/api/reservations?page:=entero&amount:=entero
+    ```
   
-    - ### Descripción:
-    
-      - Solo devuelve las reservas que se encuentren comprendidas por la página y cantidad de reservas por página que se usen en los query params
-        
-    - ### Query params y sus posibles valores:
-    
-      - page = entero positivo
-      - amount = entero positivo
-        
-    - ### Cómo usar:
-    
-      - URL de la petición
-        ``` http
-        GET REST/api/reservations?page:=entero&amount:=entero
-          
-      - ### Ejemplo:
-    
-        ``` http
-        GET REST/api/reservations?page=1&amount=10
-        ```
-        
-    - ### Resultados esperados:
-    
-        - #### Resultado positivo:
-    
-          - Código de status = 200 y retorna todas las reservas que cumplan con el rango del paginado
-    
-        - #### Resultado negativo:
-    
-          - En el caso de haber ingresado mal el query params se devuelven todas las reservas
-          - En el caso de haber ingresado valores iguales a 0 o negativos en los query params devuelve código de status = 400 y retorna un string "No es una combinación de paginado válida"
+    - ### Ejemplo:
+
+    ``` http
+    GET REST/api/reservations?page=1&amount=10
+    ```
+
+  - ### Resultados esperados:
+
+    - #### Resultado positivo:
+
+      - Código de status = 200 y retorna todas las reservas que cumplan con el rango del paginado
+
+  - #### Resultado negativo:
+
+    - En el caso de haber ingresado mal el query params se devuelven todas las reservas
+    - En el caso de haber ingresado valores iguales a 0 o negativos en los query params devuelve código de status = 400 y retorna un string "No es una combinación de paginado válida"
 
 - #### Ejemplo de combinación de las variaciones anteriores:
 
