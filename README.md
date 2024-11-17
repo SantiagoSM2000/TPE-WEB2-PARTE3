@@ -94,6 +94,7 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
      "Payed": 1
    }
    ```
+3. En la sección de autenticación Bearer usar el token previamente conseguido
 
 ### Resultados esperados:
 
@@ -135,6 +136,7 @@ Modifica una reserva seleccionada por un id, de no existir devuelven un error 40
      "Payed": 1
    }
    ```
+3. En la sección de autenticación Bearer usar el token previamente conseguido
    
 ### Resultados esperados:
 
@@ -169,5 +171,5 @@ Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que s
    - Usuario: webadmin
    - Contraseña: admin
 
-3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiendolo en la sección de de autenticación Bearer
+3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiéndolo en la sección de de autenticación Bearer
 
