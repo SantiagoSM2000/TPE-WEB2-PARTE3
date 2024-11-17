@@ -46,15 +46,20 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
    - En condiciones normales no se esperan resultados negativos
  
-### Variaciones de la petición:
+### Variaciones de la petición con query params:
 
 - #### Ordenamiento por atributo:
-  -  ### Cómo usar:
+  
+  - ### Descripción:
 
-     - URL de la petición
-       ``` http
-       GET REST/api/reservations/
-       ```
+    - Ordena las reservas con el critierio solicitado con orderBY
+
+  - ### Cómo usar:
+
+    - URL de la petición
+      ``` http
+      GET REST/api/reservations?orderBy=:Atributo_permitido
+      ```
 
 - #### Ordenamiento por orden ascendente o descendente:
 
