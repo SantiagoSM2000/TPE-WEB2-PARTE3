@@ -14,7 +14,7 @@
         }
 
         public function getToken() {
-            // obtengo el email y la contraseña desde el header
+            // Obtengo el email y la contraseña desde el header
             $auth_header = $_SERVER['HTTP_AUTHORIZATION']; // "Basic dXN1YXJpbw=="
             $auth_header = explode(' ', $auth_header); // ["Basic", "dXN1YXJpbw=="]
             if(count($auth_header) != 2) {
@@ -25,7 +25,7 @@
             }
             $user_pass = base64_decode($auth_header[1]); // "usuario:password"
             $user_pass = explode(':', $user_pass); // ["usuario", "password"]
-            // Buscamos El usuario en la base
+            // Buscamos el usuario en la base
             $user = $this->model->getUserByUserName($user_pass[0]);
             // Chequeamos la contraseña
             if($user == null || !password_verify($user_pass[1], $user->Password)) {

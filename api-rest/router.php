@@ -11,10 +11,11 @@
 
 
     //               endpoint           verbo       controller              metodo
-    $router->addRoute('reservations'      ,   'GET',    'reservationsApiController',    'getAll');
-    $router->addRoute('reservations/:id'  ,   'GET',    'reservationsApiController',    'get');
-    $router->addRoute('reservations'      ,  'POST',    'reservationsApiController',    'create');
-    $router->addRoute('reservations/:id'  ,   'PUT',    'reservationsApiController',    'update');
-    $router->addRoute('usuarios/token'    ,   'GET',    'userApiController'        ,    'getToken');
+    $router->addRoute('reservations'      ,     'GET',    'reservationsApiController',    'getAll');
+    $router->addRoute('reservations/:id'  ,     'GET',    'reservationsApiController',    'get');
+    $router->addRoute('reservations'      ,    'POST',    'reservationsApiController',    'create');
+    $router->addRoute('reservations/:id'  ,     'PUT',    'reservationsApiController',    'update');
+    $router->addRoute('reservations/:id'  ,  'DELETE',    'reservationsApiController',    'delete');
+    $router->addRoute('users/token'       ,     'GET',            'userApiController',    'getToken');
 
     $router->route($_GET['resource'], $_SERVER['REQUEST_METHOD']);

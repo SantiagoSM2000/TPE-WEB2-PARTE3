@@ -15,7 +15,14 @@ class ReservationsModel extends Model{
         
         //TENGO QUE FILTRAR POR DISTINTAS COSAS Y PASARLE EL VALOR
         if ($filterPayed) {
-            $query .= " WHERE Payed = 1";
+            switch($filterPayed) {
+                case "True":
+                    $query .= " WHERE Payed = 1";
+                    break;
+                case "False":
+                    $query .= " WHERE Payed = 0";
+                    break;
+            }
         }
 
         if ($orderBy){
@@ -28,6 +35,9 @@ class ReservationsModel extends Model{
                     break;
                 case "Room_Number":
                     $query .= ' ORDER BY Room_Number';
+                    break;
+                case "Date":
+                    $query .= ' ORDER BY Date';
                     break;
             }
         }
