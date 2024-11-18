@@ -39,10 +39,15 @@ class ReservationsModel extends Model{
                 case "Date":
                     $query .= ' ORDER BY Date';
                     break;
+                case "Payed":
+                    $query .= ' ORDER BY Payed';
+                    break;
+                default:
+                    return;
             }
         }
-
-        if ($order) {
+        
+        if ($order && $orderBy) {
             switch($order) {
                 case "Asc":
                     $query .= ' ASC';

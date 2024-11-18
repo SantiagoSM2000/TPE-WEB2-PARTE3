@@ -14,14 +14,16 @@ class ReservationsApiController {
     // /api/reservations
     public function getAll($req, $res) {
         
-    
-        $Payed = false;
-        if(isset($req->query->Payed)){
-            $Payed = $req->query->Payed;
+        $payed = false;
+        if(isset($req->query->payed)){
+            $payed = $req->query->payed;
         }
+
         $orderBy = false;
-        if(isset($req->query->orderBy))
+        if(isset($req->query->orderBy)){
             $orderBy = $req->query->orderBy;
+        }
+            
 
         $order = false;
         if(isset($req->query->order) && isset($req->query->orderBy))
@@ -30,7 +32,11 @@ class ReservationsApiController {
             return $this->view->response("Falta ordenar por un atributo", 400);
         }
 
-        $reservations = $this->model->getReservations($Payed, $orderBy, $order);
+        $reservations = $this->model->getReservations($payed, $orderBy, $order);
+
+        if (!$reservations){
+            return $this->view->response("Valor de query param de orderBy incorrecto", 404);
+        }
 
         $page = false;
         $amount = false;
@@ -58,7 +64,7 @@ class ReservationsApiController {
 
                 // Verifico que el inicio no sea mayor al tamaño del arreglo de reservas, de serlo entonces devuelvo un error en la vista
                 if ($initialIndex > $reservationsSize){
-                    return $this->view->response("No existen más reservas", 400);
+                    return $this->view->response("No existen más reservas", 404);
                 }
                 
                 // Recorro el arreglo de reservas desde la posicion inicial hasta la final según los parámetros que me hayan pasado
@@ -72,7 +78,7 @@ class ReservationsApiController {
                 return $this->view->response("No es una combinación de paginado válida", 400);
             }
         }
-        
+
         // Mando las reservas a la vista
         return $this->view->response($reservations);
     }
@@ -146,7 +152,7 @@ class ReservationsApiController {
         }
 
          // Valido los datos
-         if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || empty($req->body->Payed)) {
+         if (empty($req->body->Date) || empty($req->body->Room_number) || empty($req->body->ID_Client) || !isset($req->body->Payed)) {
             return $this->view->response('Faltan completar datos', 400);
         }
 
@@ -155,7 +161,11 @@ class ReservationsApiController {
         $Room_number = $req->body->Room_number;       
         $ID_Client = $req->body->ID_Client;   
         $Payed = $req->body->Payed;
-        $Image = " "; 
+        if (isset($req->body->Image)){
+            $Image = $req->body->Image; 
+        } else {
+            $Image = " ";
+        }
 
         // Actualiza la reserva
         $this->model->updateReservation($id, $Date, $Room_number, $Image, $ID_Client, $Payed);
