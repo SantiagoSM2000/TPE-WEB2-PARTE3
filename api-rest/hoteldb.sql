@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2024 at 12:26 AM
+-- Generation Time: Nov 18, 2024 at 01:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,16 +54,44 @@ CREATE TABLE `reservations` (
   `Date` date NOT NULL,
   `Room_number` int(11) NOT NULL,
   `Image` varchar(300) DEFAULT NULL,
-  `ID_Client` int(11) NOT NULL
+  `ID_Client` int(11) NOT NULL,
+  `Payed` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `reservations`
 --
 
-INSERT INTO `reservations` (`ID_Reservation`, `Date`, `Room_number`, `Image`, `ID_Client`) VALUES
-(29, '2024-10-20', 202, 'https://www.cataloniahotels.com/es/blog/wp-content/uploads/2024/01/catalonia-las-vegas-habitacion-doble-con-balcon-620x413.jpg', 1),
-(31, '2024-10-20', 303, '', 5);
+INSERT INTO `reservations` (`ID_Reservation`, `Date`, `Room_number`, `Image`, `ID_Client`, `Payed`) VALUES
+(38, '2024-10-20', 102, '1', 1, 0),
+(39, '2024-10-20', 102, '1', 1, 0),
+(41, '2024-10-20', 202, '1', 1, 0),
+(42, '2024-03-04', 20222, '1', 1, 0),
+(43, '2024-10-20', 2022222, '1', 1, 0),
+(44, '2024-11-12', 12, ' ', 5, 1),
+(45, '2024-04-15', 2023, '1', 1, 0),
+(46, '2024-06-11', 223, '1', 1, 0),
+(47, '2024-10-20', 23, '1', 1, 0),
+(48, '2024-10-20', 2023, '1', 1, 1),
+(49, '2025-02-28', 2023, '1', 1, 0),
+(50, '2024-10-20', 202, '1', 1, 0),
+(51, '2024-10-20', 202, '1', 1, 0),
+(52, '2024-10-20', 202, '1', 1, 0),
+(54, '2024-09-25', 205, NULL, 1, 1),
+(55, '2024-12-02', 202, NULL, 5, 0),
+(56, '2024-10-20', 203, NULL, 1, 0),
+(57, '2024-10-30', 202, NULL, 1, 1),
+(58, '2025-02-04', 202, NULL, 5, 0),
+(59, '2024-10-20', 206, NULL, 1, 0),
+(60, '2024-07-10', 202, NULL, 5, 0),
+(61, '2024-12-18', 202, NULL, 1, 0),
+(62, '2024-10-20', 202, 'as', 1, 0),
+(63, '2024-10-20', 202, NULL, 1, 0),
+(64, '2024-10-20', 202, NULL, 1, 0),
+(65, '2024-10-20', 202, NULL, 1, 0),
+(66, '2024-10-20', 202, ' ', 1, 0),
+(67, '2024-10-20', 202, 'http', 1, 0),
+(68, '2024-10-20', 202, ' ', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -123,7 +151,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `ID_Reservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `ID_Reservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `users`
