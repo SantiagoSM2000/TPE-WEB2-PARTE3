@@ -157,7 +157,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
   - ### Descripción:
   
-    - Filtra las reservas pagadas y solo devuelve esas, se debe utilizar el query param "Payed"
+    - Filtra las reservas según el valor del query param "Payed", si es true, entonces muestra las que están pagadas, si es false, muestra las que no están pagadas
       
   - ### Valores del query param "Payed":
   
