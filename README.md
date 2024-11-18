@@ -259,7 +259,7 @@ Devuelve una reserva de la base de datos según el ID
 
 - #### Resultado negativo:
 
-   - - En el caso de enviar un ID no válido por query param se devuelve un código de status = 404 y se retorna un string "La reserva con el id=(valor) no existe"
+   - En el caso de enviar un ID no válido por query param se devuelve un código de status = 404 y se retorna un string "La reserva con el id=(valor) no existe"
    
 ---
 
@@ -378,6 +378,7 @@ Elimina una reserva de la base de datos
 - #### Resultado negativo:
 
    - En el caso de enviar un ID no válido por query param se devuelve un código de status = 404 y se retorna un string "La reserva con el id=(valor) no existe"
+   - En el caso de no estar autenticado el resultado es el código de status = 401 y retorna un string "No autorizado"
  
 ---
 
