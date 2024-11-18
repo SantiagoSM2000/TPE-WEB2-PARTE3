@@ -90,13 +90,6 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   - ### Descripción:
 
     - Ordena las reservas según el criterio solicitado con el query param "orderBy"
-      
-  - ### Atributos para usar en el query param "orderBy":
-
-    - ID_Reservation
-    - ID_Client
-    - Room_Number
-    - Date
 
   - ### Cómo usar:
  
