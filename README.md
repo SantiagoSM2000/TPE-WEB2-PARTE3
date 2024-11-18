@@ -309,7 +309,7 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
 
 ### Descripción:
 
-Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parametros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
+Modifica una reserva seleccionada por un id, de no existir devuelven un error 400 para poder editar la reserva correctamente se debe enviar en el body 4 parámetros en formato json, Date : formato fecha, Room_number :int, ID_Client :int, Payed :boolean (1 o 0), 
 
 ### Atributos necesarios:
 
@@ -400,7 +400,7 @@ Su función es limitar el uso de ciertas funcionalidades (PUT y POST) para que s
    - Usuario: webadmin
    - Contraseña: admin
 
-3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiéndolo en la sección de de autenticación Bearer
+3. Copiar el token de autenticación de la respuesta y utilizarlo en las peticiones POST y PUT escribiéndolo en la sección de autenticación Bearer
 
 ---
 
