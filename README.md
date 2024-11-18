@@ -15,7 +15,7 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 Tabla de contenidos
 
 - [GET](#GET)
-	- [Descripción](#Descripción)
+	- [Descripción](#Descripción-1)
 	- [Cómo usar](#Cómo-usar)
 	- [Resultados esperados](#Resultados-esperados)
 		- [Variaciones de la petición con query params](#Variaciones-de-la-petición-con-query-params)
