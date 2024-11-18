@@ -99,6 +99,13 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
     - Date
 
   - ### Cómo usar:
+ 
+    - ### Atributos para usar en el query param "orderBy":
+
+      - ID_Reservation
+      - ID_Client
+      - Room_Number
+      - Date
 
     - URL de la petición
       ``` http
