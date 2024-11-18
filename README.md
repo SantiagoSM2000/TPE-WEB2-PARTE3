@@ -277,6 +277,10 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
    - Room_number :entero
    - ID_Client :entero
    - Payed :booleano (1 o 0)
+     
+- #### Atributo opcional:
+
+   - Image :string 
 
 1. URL de la petición:
    ``` http
@@ -319,6 +323,10 @@ Modifica una reserva seleccionada por un ID
    - Room_number :entero
    - ID_Client :entero
    - Payed :booleano (1 o 0)
+     
+- #### Atributo opcional:
+
+   - Image :string 
 
 1. URL de la petición con el ID de la reserva que se desea modificar
    ``` http
