@@ -55,7 +55,6 @@ API Rest RESTful desarrollada para la tercera entrega del trabajo práctico espe
 - [Autenticación](#Autenticación)
   	- [Descripción](#Descripción-10)
 	- [Cómo usar](#Cómo-usar-9)
-   	- [Resultados esperados](#Resultados-esperados-9)
 - [Tabla de Ruteo](#Tabla-de-Ruteo)
 
 ---
