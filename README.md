@@ -35,7 +35,7 @@ API Rest RESTful desarrollada para la tercera entrega del trabajo práctico espe
 				- [Descripción](#Descripción-5)
 				- [Cómo usar](#Cómo-usar-4)
 				- [Resultados esperados](#Resultados-esperados-4)
-          		- [Ejemplo de combinación de las variaciones anteriores](#Ejemplo-de-combinación-de-las-variaciones-anteriores)
+			- [Ejemplo de combinación de las variaciones anteriores](#Ejemplo-de-combinación-de-las-variaciones-anteriores)
 - [GET/ID](#GET/ID)
 	- [Descripción](#Descripción-6)
 	- [Cómo usar](#Cómo-usar-5)
