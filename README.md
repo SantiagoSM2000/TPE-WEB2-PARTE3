@@ -134,7 +134,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
       - URL de la petición
         ``` http
-        GET REST/api/reservations?orderBy=:Atributo_permitido&order=:orden
+        GET REST/api/reservations?orderBy=:Atributo_permitido&order=:Orden
         ```
         
       - ### Ejemplo:
@@ -168,12 +168,12 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
     - URL de la petición
       ``` http
-      GET REST/api/reservations?Payed:=Valor
+      GET REST/api/reservations?payed:=Valor
         
     - ### Ejemplo:
   
       ``` http
-      GET REST/api/reservations?Payed=True
+      GET REST/api/reservations?payed=True
       ```
       
   - ### Resultados esperados:
@@ -201,7 +201,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
     - URL de la petición
     ``` http
-    GET REST/api/reservations?page:=entero&amount:=entero
+    GET REST/api/reservations?page:=Entero&amount:=Entero
     ```
   
     - ### Ejemplo:
@@ -226,7 +226,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   - URL de la petición con todos los ordenamientos y filtrados:
     
     ``` http
-    GET REST/api/reservations?orderBy=Room_Number&order=Desc&Payed=True&page=1&amount=10
+    GET REST/api/reservations?orderBy=Room_Number&order=Desc&payed=True&page=1&amount=10
     ```
   
 
