@@ -269,14 +269,14 @@ Devuelve una reserva de la base de datos según el ID
 
 Crea una reserva, la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request y la devuelve
 
-### Atributos necesarios:
-
-- Date :fecha ("aaaa-mm-dd")
-- Room_number :entero
-- ID_Client :entero
-- Payed :booleano (1 o 0)
-
 ### Cómo usar:
+
+- #### Atributos necesarios:
+
+   - Date :fecha ("aaaa-mm-dd")
+   - Room_number :entero
+   - ID_Client :entero
+   - Payed :booleano (1 o 0)
 
 1. URL de la petición:
    ``` http
