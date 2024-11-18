@@ -23,7 +23,7 @@ API Rest RESTful desarrollada para la tercera entrega del trabajo práctico espe
 				- [Descripción](#Descripción-2)
 				- [Cómo usar](#Cómo-usar-1)
 				- [Resultados esperados](#Resultados-esperados-1)
-            		- [Ordenamiento por orden ascendente o descendente](#Ordenamiento-por-orden-ascendente-o-descendente)
+      			- [Ordenamiento por orden ascendente o descendente](#Ordenamiento-por-orden-ascendente-o-descendente)
 				- [Descripción](#Descripción-3)
 				- [Cómo usar](#Cómo-usar-2)
 				- [Resultados esperados](#Resultados-esperados-2)
