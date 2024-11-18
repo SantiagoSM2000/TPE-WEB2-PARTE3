@@ -89,7 +89,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
   - ### Descripción:
 
-    - Ordena las reservas según el critierio solicitado con el query param "orderBy"
+    - Ordena las reservas según el criterio solicitado con el query param "orderBy"
       
   - ### Atributos para usar en el query param "orderBy":
 
