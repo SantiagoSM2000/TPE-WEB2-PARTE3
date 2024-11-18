@@ -313,19 +313,19 @@ Modifica una reserva seleccionada por un ID
 
 ### Cómo usar:
 
-1. #### Atributos necesarios:
+- #### Atributos necesarios:
 
-  - Date :fecha ("aaaa-mm-dd")
-  - Room_number :entero
-  - ID_Client :entero
-  - Payed :booleano (1 o 0)
+   - Date :fecha ("aaaa-mm-dd")
+   - Room_number :entero
+   - ID_Client :entero
+   - Payed :booleano (1 o 0)
 
-2. URL de la petición con el ID de la reserva que se desea modificar
+1. URL de la petición con el ID de la reserva que se desea modificar
    ``` http
    PUT REST/api/reservations/:ID
    ```
 
-3. En el body de la petición deben ir los atributos de las reservas en formato JSON por ejemplo:
+2. En el body de la petición deben ir los atributos de las reservas en formato JSON por ejemplo:
    ``` json
    {
      "Date": "2024-11-17",
@@ -334,7 +334,7 @@ Modifica una reserva seleccionada por un ID
      "Payed": 1
    }
    ```
-4. En la sección de autenticación Bearer usar el [token](#Autenticación) previamente conseguido 
+3. En la sección de autenticación Bearer usar el [token](#Autenticación) previamente conseguido 
    
 ### Resultados esperados:
 
