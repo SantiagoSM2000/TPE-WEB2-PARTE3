@@ -1,4 +1,4 @@
-# Trabajo Espeical Web-2 Tercera Parte
+# Trabajo Especial Web-2 Tercera Parte
 
 ## Integrante:
 
