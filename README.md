@@ -12,7 +12,7 @@ API Rest RESTful desarrollada para la tercer entrega del trabajo práctico espec
 
 ---
 
-Tabla de contenidos
+## Tabla de contenidos:
 
 - [GET](#GET)
 	- [Descripción](#Descripción-1)
@@ -20,9 +20,9 @@ Tabla de contenidos
 	- [Resultados esperados](#Resultados-esperados)
 		- [Variaciones de la petición con query params](#Variaciones-de-la-petición-con-query-params)
   			- [Ordenamiento por atributo](#Ordenamiento-por-atributo)
-	    			- [Descripción](#Descripción-2)
-	        		- [Cómo usar](#Cómo-usar-1)
-	         		- [Resultados esperados](#Resultados-esperados-1)
+		    			- [Descripción](#Descripción-2)
+		        		- [Cómo usar](#Cómo-usar-1)
+		         		- [Resultados esperados](#Resultados-esperados-1)
             		- [Ordenamiento por orden ascendente o descendente](#Ordenamiento-por-orden-ascendente-o-descendente)
 	      			- [Descripción](#Descripción-3)
 	   			- [Cómo usar](#Cómo-usar-2)
