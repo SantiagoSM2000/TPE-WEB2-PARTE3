@@ -1,6 +1,6 @@
 # Trabajo Especial Web-2 Tercera Parte
 
-## Integrante:
+## Alumno:
 
 - Santiago San Martín
 
