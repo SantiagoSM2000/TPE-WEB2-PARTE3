@@ -123,7 +123,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
     
     - ### Descripción:
   
-      - Se puede usar unicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
+      - Se puede usar únicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
      
       - ### Valores del query param "order":
   
