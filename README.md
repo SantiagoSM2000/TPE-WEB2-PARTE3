@@ -117,7 +117,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
     - #### Resultado negativo:
 
-      - En el caso de haber ingresado mal el query params se devuelven las reservas sin ningún criterio de ordenamiento
+      - En el caso de haber ingresado mal el valor del query param se devuelve un código de status = 404 y se retorna un string "Valor de query param incorrecto"
 
   - #### Ordenamiento por orden ascendente o descendente:
     
