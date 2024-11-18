@@ -98,6 +98,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
       - ID_Client
       - Room_Number
       - Date
+      - Payed
 
     - URL de la petición
       ``` http
