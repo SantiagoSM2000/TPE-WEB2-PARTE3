@@ -10,7 +10,7 @@
     $router->addMiddleware(new JWTAuthMiddleware());
 
 
-    //               endpoint           verbo       controller              metodo
+    //               endpoint                   verbo          controller                  metodo
     $router->addRoute('reservations'      ,     'GET',    'reservationsApiController',    'getAll');
     $router->addRoute('reservations/:id'  ,     'GET',    'reservationsApiController',    'get');
     $router->addRoute('reservations'      ,    'POST',    'reservationsApiController',    'create');
