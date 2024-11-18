@@ -63,7 +63,7 @@ API Rest RESTful desarrollada para la tercera entrega del trabajo práctico espe
 
 ### Descripción:
 
-Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos 
+Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos atributos.
 
 ### Cómo usar:
 
@@ -88,7 +88,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
   
   - ### Descripción:
 
-    - Ordena las reservas según el criterio solicitado con el query param "orderBy"
+    - Ordena las reservas según el criterio solicitado con el query param "orderBy".
 
   - ### Cómo usar:
  
@@ -117,13 +117,14 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
     - #### Resultado negativo:
 
-      - En el caso de haber ingresado mal el valor del query param se devuelve un código de status = 404 y se retorna un string "Valor de query param incorrecto"
+      - En el caso de haber ingresado mal el query param se devuelve la lista de reservas sin ningún orden
+      - En el caso de haber ingresado mal el valor del query param se devuelve un código de status = 404 y se retorna un string "Valor de query param para orderBy incorrecto"
 
   - #### Ordenamiento por orden ascendente o descendente:
     
     - ### Descripción:
   
-      - Se puede usar únicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order"
+      - Se puede usar únicamente en conjunto con un ordenamiento por atributo para aplicar un ordenamiento de las reservas por orden ascendente o descendente con el query param "order".
      
       - ### Valores del query param "order":
   
@@ -157,9 +158,9 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
   - ### Descripción:
   
-    - Filtra las reservas según el valor del query param "Payed", si es true, entonces muestra las que están pagadas, si es false, muestra las que no están pagadas
+    - Filtra las reservas según el valor del query param "payed", si es true, entonces muestra las que están pagadas, si es false, muestra las que no están pagadas.
       
-  - ### Valores del query param "Payed":
+  - ### Valores del query param "payed":
   
     - True
     - False
@@ -190,7 +191,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
   - ### Descripción:
 
-    - Solo devuelve las reservas que se encuentren comprendidas por la página y cantidad de reservas por página que se usen en los query params
+    - Solo devuelve las reservas que se encuentren comprendidas por la página y cantidad de reservas por página que se usen en los query params.
 
   - ### Query params y sus posibles valores:
 
@@ -236,7 +237,7 @@ Devuelve todas las reservas de la base de datos, se pueden ordenar por distintos
 
 ### Descripción:
 
-Devuelve una reserva de la base de datos según el ID
+Devuelve una reserva de la base de datos según el ID.
 
 ### Cómo usar:
 
@@ -267,7 +268,7 @@ Devuelve una reserva de la base de datos según el ID
 
 ### Descripción:
 
-Crea una reserva, la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request y la devuelve
+Crea una reserva, la inserta en la base de datos con los atributos requeridos en formato JSON enviados mediante el body de la request y la devuelve.
 
 ### Cómo usar:
 
@@ -313,7 +314,7 @@ Crea una reserva, la inserta en la base de datos con los atributos requeridos en
 
 ### Descripción:
 
-Modifica una reserva seleccionada por un ID
+Modifica una reserva seleccionada por un ID.
 
 ### Cómo usar:
 
@@ -362,7 +363,7 @@ Modifica una reserva seleccionada por un ID
 
 ### Descripción:
 
-Elimina una reserva de la base de datos
+Elimina una reserva de la base de datos.
 
 ### Cómo usar:
 
